@@ -31,7 +31,7 @@
                         echo "</tr>";
                     }
                     echo"<tr class=\"add-produits\">";
-                    echo "<td><a href=\"ajoutProduit.php\" class=\"noire\">Ajouter Produit <i class=\"fas fa-plus\"></i></a></td>";
+                    echo "<td><a href=\"ajoutProduits.php\" class=\"noire\">Ajouter Produit <i class=\"fas fa-plus\"></i></a></td>";
                     echo "<td></td>";
                     echo "</tr>";
                     echo "</table>";

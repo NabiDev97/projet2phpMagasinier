@@ -4,10 +4,9 @@
     // Enregistrement des donnees dans la table produits
     function addProductData($nom,$quantite,$prix){
             global $pdo;
-            $req=$pdo->prepare('INSERT into produits nom,quantite,prix VALUES(?,?,?)');
-            $req->execute($nom,$quantite,$prix);
-            $donnees=$req->fetchAll();
-            return($donnees);
+            $req=$pdo->prepare('INSERT into produits (nom,quantite,prix) VALUES(?,?,?)');
+            $req->execute(array($nom,$quantite,$prix));
+            header('location:session.php');
     }
 
     // recuperation des donnees dans la taable produits
@@ -22,13 +21,15 @@
     // supresion de donees dans la table produits
     // $id=$_POST['id'];
     // die(var_dump($id));
-    function delProductData(){
-        global $id;
-        die (var_dump($id));
+    function delProductData($id){
         global $pdo;
-        $req=$pdo->query('DELETE FROM produits WHERE id=?');
-        $req->execute($id);
-        $donnees=$req->fetchAll();
-        return($donnees);
+        $req=$pdo->prepare('DELETE FROM produits WHERE id=?');
+        if(!empty($id));
+        $req->execute(array($id));
     }
-?>
+    if(!empty($_GET['id'])){
+        delProductData($_GET['id']);
+        header('location:session.php');
+    }
+    
+    ?>

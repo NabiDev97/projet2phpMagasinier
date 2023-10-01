@@ -61,20 +61,18 @@ if(empty($message)) {
 </body>
 <div class="wrapper ">
         <div class="form-left">
-            <h2 class="text-uppercase">information</h2>
+            <h2 class="text-uppercase">BIENVENUE SUR NOTRE PLATEFORME DE GESTION DE MAGASIN</h2>
             <p>
-                Bien venue dans la plateforme ideal Pour une meilleur gestion de votre magasin,
-
+           Bienvenue dans notre plateforme de gestion de magasin, conçue pour simplifier vos opérations quotidiennes. Que vous soyez un nouveau client ou que vous reveniez, nous sommes ravis de vous accueillir !
             </p>
             <p class="text">
-                <span>Inscription:</span>
-                Veuillez remplir toutes les champs pour creer votre compte.Et si vous avez deja un compte veuillez cliquez si dessous pour vous authentifier
+            <span>Inscription :</span> Pour commencer, veuillez remplir tous les champs ci-dessous pour créer votre compte. Si vous possédez déjà un compte, cliquez sur le lien ci-dessous pour vous connecter et accéder à votre espace.
             </p>
             <div class="form-field">
                 <a href="login.php"><input type="submit" class="account" value="Have an Account?"></a>
             </div>
             <footer class="footer mb-0 mt-5">
-                &copy;NabiDev Thech
+            &copy; 2023 all right reserved by NabiDev
             </footer>
         </div>
         <form class="form-right" method="post" action="">
@@ -82,25 +80,25 @@ if(empty($message)) {
             <div class="row">
                 <div class="col-sm-6 mb-3">
                     <label for="nom">Nom</label>
-                    <input type="text" name="nom" id="nom" class="input-field"  autocomplete="of">
+                    <input type="text" name="nom" id="nom" class="input-field" required autocomplete="of">
                 </div>
                 <div class="col-sm-6 mb-3">
                     <label for="prenom">Prenom</label>
-                    <input type="text" name="prenom" id="prenom" class="input-field"  autocomplete="of">
+                    <input type="text" name="prenom" id="prenom" class="input-field"  autocomplete="of" required>
                 </div>
             </div>
             <div class="mb-3">
                 <label>Nom d'utilisateur</label>
-                <input type="email" class="input-field" name="login"  autocomplete="of">
+                <input type="email" class="input-field" name="login" required autocomplete="of">
             </div>
             <div class="row">
                 <div class="col-sm-6 mb-3">
                     <label>Mot de passe</label>
-                    <input type="password" name="pswd" id="pswd" class="input-field" >
+                    <input type="password" name="pswd" id="pswd" class="input-field" required >
                 </div>
                 <div class="col-sm-6 mb-3">
                     <label>Confirmation</label>
-                    <input type="password" name="cpswd" id="cpswd" class="input-field" >
+                    <input type="password" name="cpswd" id="cpswd" class="input-field" required >
                 </div>
             </div>
             <div class="form-field">
